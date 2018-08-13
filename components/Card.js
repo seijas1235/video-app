@@ -4,27 +4,32 @@ import { View,
         TouchableHighlight,
         Image,
         StyleSheet, } from 'react-native';
+    //titulo
+    // urlimagen
+    //descripcion
 
-
-const Card = () => {
+const Card = ({title, image, description}) => {
     // ejecucion de esta funcion: 
+
+
+    
     const imageSource = {
-        uri: 'https://www.revistawelldone.cl/wp-content/uploads/2017/12/avengersinfinitywar-1494357736132_1280w.jpg'
+        uri: image
     };
     const onPressButton = () => {
+        console.log('Se presiono el botton');
 
     };
     return (
         <View style={styles.container}>
 
             <Text style={styles.title}>
-                CARD (EJEMPLO)!
+                {title}
             </Text>
             <Image style={styles.mainImage}
                     source = {imageSource} />
             <Text style={styles.description}>
-            descripcion de ejemplo de video
-            largo
+            {description}
             </Text> 
             <TouchableHighlight
                 style = {styles.button}
@@ -41,7 +46,7 @@ const Card = () => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#0F0',
-        height:300,
+        height: 500,
         width: 300
     },
     title: {
