@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Card from './components/Card';
 
 export default class App extends React.Component {
   render() {
@@ -7,7 +8,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>KIKITO DESCAMPS!</Text>
         <Text>CURSO DE REACT NATIVE </Text>     
-        <Text> QUE TAL </Text> 
+        <Card> </Card> 
       </View>
     );
   }
