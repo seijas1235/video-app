@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import { View,
         Text,
         TouchableHighlight,
@@ -46,21 +48,19 @@ const Card = ({title, image, description}) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#0F0',
-        height: 500,
-        width: 300
+        flex: 0,
+        width: 300,
+        padding: 10
     },
     title: {
         fontSize: 30 
     },
     mainImage: {
-        height: 150,
-        width: 280,
-        marginLeft: 10,
+        height: 190,
+        
     },
     button:{
         height: 30,
-        width: 280,
-        marginLeft: 10,
         backgroundColor: '#999'
     },
     buttonText:{
@@ -74,4 +74,12 @@ const styles = StyleSheet.create({
     }
 
 });
+
+Card.propTypes={
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    description: PropTypes.string.isRequired,
+
+};
+
 export default Card;
