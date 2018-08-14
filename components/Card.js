@@ -5,22 +5,21 @@ import { View,
         Text,
         TouchableHighlight,
         Image,
-        StyleSheet, } from 'react-native';
+        StyleSheet, 
+        Linking, } from 'react-native';
     //titulo
     // urlimagen
     //descripcion
 
-const Card = ({title, image, description}) => {
+const Card = ({title, image, description, url}) => {
     // ejecucion de esta funcion: 
-
-
-    
+   
     const imageSource = {
         uri: image
     };
     const onPressButton = () => {
         console.log('Se presiono el botton');
-
+        Linking.openURL(url);
     };
     return (
         <View style={styles.container}>
