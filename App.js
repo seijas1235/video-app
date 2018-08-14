@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CardSet from './components/CardSet';
 import cards from './data';
+import { Constants } from 'expo';
 
 
 //const Items =[cardData,cardData,cardData];
@@ -9,7 +10,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>SEBASTIAN CABAÑAS!</Text>
+        <Text style={styles.welcome}>SEBASTIAN CABAÑAS!</Text>
         <Text>CURSO DE REACT NATIVE </Text>     
       <CardSet items={cards}> 
       </CardSet>
@@ -24,5 +25,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: Constants.statusBarHeight,
+
   },
+  welcome:{
+    fontSize: 15,
+    fontWeight: 'bold',
+    lineHeight:30,
+    color:'#000',
+    textAlign: 'center',
+  }
 });
